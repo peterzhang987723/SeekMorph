@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seekmorph"
+version = "0.2.0"
+description = "Hybrid AI search, personalized recommendation reranking, and ACL-scoped enterprise knowledge base engine."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Shoufa Zhang", email = "peterzhang987723@users.noreply.github.com"}
+]
+keywords = ["search", "recommendation", "rag", "reranking", "ndcg", "knowledge-base", "bm25"]
+dependencies = []
+
+[project.scripts]
+seekmorph = "seekmorph.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
