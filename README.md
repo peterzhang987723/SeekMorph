@@ -4,6 +4,8 @@ Hybrid search, personalized recommendation reranking, RBAC/ACL knowledge base, a
 
 `SeekMorph` pairs with [`DocMorph`](https://github.com/peterzhang987723/DocMorph) (or operates standalone) to index knowledge base items and personal agent memories, enforce pre-retrieval tenant and role access control, route query intent, combine inverted-index `BM25` and dense vector similarity with user interest profiles, Bayesian-smoothed CTR, and exponential recency decay, and gate proactive SuperAgent work items (`AgentTicket` / `Mandate`).
 
+- **Interactive Demo (Hugging Face Space)**: [https://huggingface.co/spaces/zhangshoufa/DocMorph](https://huggingface.co/spaces/zhangshoufa/DocMorph)
+
 ## Features
 
 - **Pre-retrieval ACL gate (`seekmorph.engine`)**: Filters items by `tenant_id` and `allowed_roles` before scoring so unauthorized documents never enter candidate sets.
@@ -102,6 +104,7 @@ ticket = runtime.receive(
 
 ```bash
 pytest -v
+python3 tests/test_seekmorph_5layers.py
 ```
 
 ## License
